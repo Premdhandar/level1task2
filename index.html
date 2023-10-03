@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>JavaScript Examples</h1>
+
+    <button id="myButton" onclick="changeColor()">Click me to change color</button>
+
+    <script>
+        function changeColor() {
+            var button = document.getElementById("myButton");
+            button.style.backgroundColor = "red";
+        }
+    </script>
+
+    <hr>
+
+    <h2>Greeting Message</h2>
+    <script>
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+
+        var greeting;
+
+        if (hours < 12) {
+            greeting = "Good morning!";
+        } else if (hours < 18) {
+            greeting = "Good afternoon!";
+        } else {
+            greeting = "Good evening!";
+        }
+
+        alert(greeting);
+    </script>
+
+    <hr>
+
+    <h2>Basic Calculator</h2>
+    <input type="text" id="num1" placeholder="Enter a number">
+    <input type="text" id="num2" placeholder="Enter another number">
+    <button onclick="addNumbers()">Add</button>
+    <p id="result"></p>
+
+    <script>
+        function addNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var result = num1 + num2;
+                document.getElementById("result").innerHTML = "Result: " + result;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+            }
+        }
+    </script>
+</body>
+</html>
