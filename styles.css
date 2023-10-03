@@ -1,0 +1,31 @@
+/* styles.css */
+body {
+    background-image: url('india flag.png');
+    background-size: cover; /* Adjust this property to control how the background image is scaled */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+}
+
+#myButton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+input, button {
+    margin: 5px;
+    padding: 5px;
+}
+
+#result {
+    font-weight: bold;
+}
